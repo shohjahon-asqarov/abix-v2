@@ -1,17 +1,59 @@
 "use client"
 
-import type React from "react"
+import { useEffect, useRef, type ReactNode } from "react"
 
-import { useEffect, useRef } from "react"
-
-interface ScrollAnimationProps {
-  children: React.ReactNode
+interface StaggeredAnimationProps {
+  children: ReactNode
   className?: string
-  animation?: "fadeInUp" | "fadeInLeft" | "fadeInRight" | "scaleIn" | "slideInUp"
   delay?: number
 }
 
-export function ScrollAnimation({ children, className = "", animation = "fadeInUp", delay = 0 }: ScrollAnimationProps) {
+export function StaggeredAnimation({ children, className = "", delay = 100 }: StaggeredAnimationProps) {
+  const containerRef = useRef<HTMLDivElement>(null)
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            const children = entry.target.children
+            Array.from(children).forEach((child, index) => {
+              setTimeout(() => {
+                child.classList.add("animate-in")
+              }, index * delay)
+            })
+            observer.unobserve(entry.target)
+          }
+        })
+      },
+      {
+        threshold: 0.1,
+        rootMargin: "0px 0px -50px 0px",
+      },
+    )
+
+    if (containerRef.current) {
+      observer.observe(containerRef.current)
+    }
+
+    return () => observer.disconnect()
+  }, [delay])
+
+  return (
+    <div ref={containerRef} className={className}>
+      {children}
+    </div>
+  )
+}
+
+interface ScrollRevealProps {
+  children: ReactNode
+  className?: string
+  direction?: "up" | "down" | "left" | "right"
+  delay?: number
+}
+
+export function ScrollReveal({ children, className = "", direction = "up", delay = 0 }: ScrollRevealProps) {
   const elementRef = useRef<HTMLDivElement>(null)
 
   useEffect(() => {
@@ -39,39 +81,59 @@ export function ScrollAnimation({ children, className = "", animation = "fadeInU
     return () => observer.disconnect()
   }, [delay])
 
-  const animationClasses = {
-    fadeInUp: "opacity-0 translate-y-8",
-    fadeInLeft: "opacity-0 -translate-x-8",
-    fadeInRight: "opacity-0 translate-x-8",
-    scaleIn: "opacity-0 scale-95",
-    slideInUp: "opacity-0 translate-y-12",
+  const getInitialTransform = () => {
+    switch (direction) {
+      case "up":
+        return "translateY(50px)"
+      case "down":
+        return "translateY(-50px)"
+      case "left":
+        return "translateX(50px)"
+      case "right":
+        return "translateX(-50px)"
+      default:
+        return "translateY(50px)"
+    }
   }
 
   return (
     <div
       ref={elementRef}
-      className={`transition-all duration-700 ease-out ${animationClasses[animation]} ${className}`}
+      className={`opacity-0 transition-all duration-700 ease-out ${className}`}
+      style={{
+        transform: getInitialTransform(),
+      }}
     >
       {children}
     </div>
   )
 }
 
-// Staggered animation for lists
-interface StaggeredAnimationProps {
-  children: React.ReactNode[]
+interface ParallaxProps {
+  children: ReactNode
+  speed?: number
   className?: string
-  staggerDelay?: number
 }
 
-export function StaggeredAnimation({ children, className = "", staggerDelay = 100 }: StaggeredAnimationProps) {
+export function Parallax({ children, speed = 0.5, className = "" }: ParallaxProps) {
+  const elementRef = useRef<HTMLDivElement>(null)
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (elementRef.current) {
+        const scrolled = window.pageYOffset
+        const parallax = scrolled * speed
+        elementRef.current.style.transform = `translateY(${parallax}px)`
+      }
+    }
+
+    window.addEventListener("scroll", handleScroll)
+    return () => window.removeEventListener("scroll", handleScroll)
+  }, [speed])
+
   return (
-    <div className={className}>
-      {children.map((child, index) => (
-        <ScrollAnimation key={index} delay={index * staggerDelay} animation="fadeInUp">
-          {child}
-        </ScrollAnimation>
-      ))}
+    <div ref={elementRef} className={`parallax ${className}`}>
+      {children}
     </div>
   )
 }
