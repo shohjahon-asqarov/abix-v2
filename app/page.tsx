@@ -32,7 +32,7 @@ import {
 import { ProjectModal } from "@/components/project-modal"
 import { LiveChat } from "@/components/live-chat"
 
-export default function AbixAgencyLanding() {
+export default function IqroAgencyLanding() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const [selectedProject, setSelectedProject] = useState(null)
   const [currentTestimonial, setCurrentTestimonial] = useState(0)
@@ -143,7 +143,7 @@ export default function AbixAgencyLanding() {
       name: "Sarah Johnson",
       role: "CEO, TechStart",
       content:
-        "Abix Agency delivered exceptional results. Their team's expertise and dedication exceeded our expectations.",
+        "Iqro Agency delivered exceptional results. Their team's expertise and dedication exceeded our expectations.",
       rating: 5,
       avatar: "/placeholder-user.jpg",
     },
@@ -187,9 +187,9 @@ export default function AbixAgencyLanding() {
             {/* Logo */}
             <div className="flex items-center space-x-3">
               <div className="w-8 h-8 bg-black dark:bg-white rounded-lg flex items-center justify-center">
-                <span className="text-white dark:text-black font-bold text-sm">A</span>
+                <span className="text-white dark:text-black font-bold text-sm">I</span>
               </div>
-              <span className="text-lg font-light">Abix Agency</span>
+              <span className="text-lg font-light">Iqro Agency</span>
             </div>
 
             {/* Desktop Navigation */}
@@ -282,20 +282,20 @@ export default function AbixAgencyLanding() {
         <div className="container mx-auto text-center">
           <div className="animate-fade-in">
             <h1 className="text-6xl md:text-8xl font-extralight mb-8 leading-tight tracking-tight">
-              Transform Your
+              IT loyihalar va
               <br />
-              <span className="font-light">Digital Presence</span>
+              <span className="font-light">Ta'lim</span>
             </h1>
             <p className="text-lg md:text-xl text-gray-600 dark:text-gray-400 mb-16 max-w-2xl mx-auto font-light leading-relaxed">
-              We create stunning websites, mobile apps, and digital experiences that drive results and exceed
-              expectations.
+              Biz zamonaviy IT loyihalar va sifatli ta'lim xizmatlarini taqdim etamiz. Sizning raqamli mavjudligingizni
+              yangi bosqichga olib chiqamiz.
             </p>
             <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
               <Button
                 size="lg"
                 className="bg-black dark:bg-white text-white dark:text-black hover:bg-gray-800 dark:hover:bg-gray-200 px-8 py-4 text-sm font-light group"
               >
-                Start Your Project
+                Loyihani boshlash
                 <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
               </Button>
               <Button
@@ -303,7 +303,7 @@ export default function AbixAgencyLanding() {
                 variant="outline"
                 className="border-gray-300 dark:border-gray-700 px-8 py-4 text-sm font-light hover:bg-gray-50 dark:hover:bg-gray-900 bg-transparent"
               >
-                View Our Work
+                Ishlarimizni ko'ring
               </Button>
             </div>
           </div>
@@ -314,9 +314,9 @@ export default function AbixAgencyLanding() {
       <section id="services" className="py-32 px-6">
         <div className="container mx-auto">
           <div className="text-center mb-20 animate-fade-in">
-            <h2 className="text-4xl md:text-5xl font-extralight mb-6">What We Do</h2>
+            <h2 className="text-4xl md:text-5xl font-extralight mb-6">Xizmatlarimiz</h2>
             <p className="text-lg text-gray-600 dark:text-gray-400 max-w-2xl mx-auto font-light">
-              We offer comprehensive digital solutions to help your business thrive.
+              Biznesingizni rivojlantirish uchun keng qamrovli raqamli yechimlar taklif etamiz.
             </p>
           </div>
 
@@ -346,10 +346,10 @@ export default function AbixAgencyLanding() {
         <div className="container mx-auto">
           <div className="grid lg:grid-cols-2 gap-20 items-center">
             <div className="animate-fade-in">
-              <h2 className="text-4xl md:text-5xl font-extralight mb-8">Why Choose Us</h2>
+              <h2 className="text-4xl md:text-5xl font-extralight mb-8">Nima uchun bizni tanlaysiz</h2>
               <p className="text-lg text-gray-600 dark:text-gray-400 mb-12 font-light leading-relaxed">
-                With years of experience and a passion for innovation, we're committed to delivering solutions that
-                exceed your expectations.
+                Ko'p yillik tajriba va innovatsiyaga bo'lgan ishtiyoq bilan, biz sizning kutganingizdan ham yuqori
+                natijalar berishga sodiqmiz.
               </p>
 
               <div className="space-y-8">
@@ -372,19 +372,19 @@ export default function AbixAgencyLanding() {
                 <div className="grid grid-cols-2 gap-8">
                   <div className="text-center">
                     <div className="text-3xl font-extralight mb-2">150+</div>
-                    <div className="text-gray-600 dark:text-gray-400 text-sm font-light">Projects</div>
+                    <div className="text-gray-600 dark:text-gray-400 text-sm font-light">Loyihalar</div>
                   </div>
                   <div className="text-center">
                     <div className="text-3xl font-extralight mb-2">98%</div>
-                    <div className="text-gray-600 dark:text-gray-400 text-sm font-light">Satisfaction</div>
+                    <div className="text-gray-600 dark:text-gray-400 text-sm font-light">Mamnunlik</div>
                   </div>
                   <div className="text-center">
                     <div className="text-3xl font-extralight mb-2">5+</div>
-                    <div className="text-gray-600 dark:text-gray-400 text-sm font-light">Years</div>
+                    <div className="text-gray-600 dark:text-gray-400 text-sm font-light">Yil tajriba</div>
                   </div>
                   <div className="text-center">
                     <div className="text-3xl font-extralight mb-2">24/7</div>
-                    <div className="text-gray-600 dark:text-gray-400 text-sm font-light">Support</div>
+                    <div className="text-gray-600 dark:text-gray-400 text-sm font-light">Qo'llab-quvvatlash</div>
                   </div>
                 </div>
               </div>
@@ -397,9 +397,10 @@ export default function AbixAgencyLanding() {
       <section id="portfolio" className="py-32 px-6">
         <div className="container mx-auto">
           <div className="text-center mb-20 animate-fade-in">
-            <h2 className="text-4xl md:text-5xl font-extralight mb-6">Our Work</h2>
+            <h2 className="text-4xl md:text-5xl font-extralight mb-6">Ishlarimiz</h2>
             <p className="text-lg text-gray-600 dark:text-gray-400 max-w-2xl mx-auto font-light">
-              Take a look at some of our recent projects.
+              So'nggi loyihalarimizga nazar tashlang va bizneslarning maqsadlariga erishishda qanday yordam
+              berganligimizni ko'ring.
             </p>
           </div>
 
@@ -439,9 +440,9 @@ export default function AbixAgencyLanding() {
       <section className="py-32 px-6 bg-gray-50 dark:bg-gray-950">
         <div className="container mx-auto">
           <div className="text-center mb-20 animate-fade-in">
-            <h2 className="text-4xl md:text-5xl font-extralight mb-6">Client Feedback</h2>
+            <h2 className="text-4xl md:text-5xl font-extralight mb-6">Mijozlar fikri</h2>
             <p className="text-lg text-gray-600 dark:text-gray-400 max-w-2xl mx-auto font-light">
-              What our clients say about working with us.
+              Mijozlarimiz biz bilan ishlash haqida nima deyishadi.
             </p>
           </div>
 
@@ -498,9 +499,9 @@ export default function AbixAgencyLanding() {
       <section id="contact" className="py-32 px-6">
         <div className="container mx-auto">
           <div className="text-center mb-20 animate-fade-in">
-            <h2 className="text-4xl md:text-5xl font-extralight mb-6">Get In Touch</h2>
+            <h2 className="text-4xl md:text-5xl font-extralight mb-6">Bog'lanish</h2>
             <p className="text-lg text-gray-600 dark:text-gray-400 max-w-2xl mx-auto font-light">
-              Ready to start your project? Let's discuss your needs.
+              Loyihangizni boshlashga tayyormisiz? Ehtiyojlaringizni muhokama qilaylik.
             </p>
           </div>
 
@@ -508,25 +509,23 @@ export default function AbixAgencyLanding() {
             <div className="animate-fade-in">
               <Card className="glass-minimal border-gray-100 dark:border-gray-900">
                 <CardContent className="p-8">
-                  <h3 className="text-xl font-light mb-8">Send us a message</h3>
+                  <h3 className="text-xl font-light mb-8">Bizga xabar yuboring</h3>
                   <form className="space-y-6">
                     <div className="grid md:grid-cols-2 gap-6">
                       <div>
-                        <label className="block text-gray-600 dark:text-gray-400 mb-2 text-sm font-light">
-                          First Name
-                        </label>
+                        <label className="block text-gray-600 dark:text-gray-400 mb-2 text-sm font-light">Ism</label>
                         <Input
                           className="bg-transparent border-gray-200 dark:border-gray-800 focus:border-gray-400 dark:focus:border-gray-600"
-                          placeholder="John"
+                          placeholder="Ismingiz"
                         />
                       </div>
                       <div>
                         <label className="block text-gray-600 dark:text-gray-400 mb-2 text-sm font-light">
-                          Last Name
+                          Familiya
                         </label>
                         <Input
                           className="bg-transparent border-gray-200 dark:border-gray-800 focus:border-gray-400 dark:focus:border-gray-600"
-                          placeholder="Doe"
+                          placeholder="Familiyangiz"
                         />
                       </div>
                     </div>
@@ -535,28 +534,28 @@ export default function AbixAgencyLanding() {
                       <Input
                         type="email"
                         className="bg-transparent border-gray-200 dark:border-gray-800 focus:border-gray-400 dark:focus:border-gray-600"
-                        placeholder="john@example.com"
+                        placeholder="email@example.com"
                       />
                     </div>
                     <div>
-                      <label className="block text-gray-600 dark:text-gray-400 mb-2 text-sm font-light">Subject</label>
+                      <label className="block text-gray-600 dark:text-gray-400 mb-2 text-sm font-light">Mavzu</label>
                       <Input
                         className="bg-transparent border-gray-200 dark:border-gray-800 focus:border-gray-400 dark:focus:border-gray-600"
-                        placeholder="Project Inquiry"
+                        placeholder="Loyiha haqida so'rov"
                       />
                     </div>
                     <div>
-                      <label className="block text-gray-600 dark:text-gray-400 mb-2 text-sm font-light">Message</label>
+                      <label className="block text-gray-600 dark:text-gray-400 mb-2 text-sm font-light">Xabar</label>
                       <Textarea
                         className="bg-transparent border-gray-200 dark:border-gray-800 focus:border-gray-400 dark:focus:border-gray-600 min-h-[120px]"
-                        placeholder="Tell us about your project..."
+                        placeholder="Loyihangiz haqida bizga ayting..."
                       />
                     </div>
                     <Button
                       type="submit"
                       className="w-full bg-black dark:bg-white text-white dark:text-black hover:bg-gray-800 dark:hover:bg-gray-200 py-3 font-light"
                     >
-                      Send Message
+                      Xabar yuborish
                     </Button>
                   </form>
                 </CardContent>
@@ -573,7 +572,7 @@ export default function AbixAgencyLanding() {
                       </div>
                       <div>
                         <h4 className="font-light">Email</h4>
-                        <p className="text-gray-600 dark:text-gray-400 text-sm">hello@abixagency.com</p>
+                        <p className="text-gray-600 dark:text-gray-400 text-sm">hello@iqroagency.com</p>
                       </div>
                     </div>
                   </CardContent>
@@ -586,8 +585,8 @@ export default function AbixAgencyLanding() {
                         <Phone className="w-4 h-4" />
                       </div>
                       <div>
-                        <h4 className="font-light">Phone</h4>
-                        <p className="text-gray-600 dark:text-gray-400 text-sm">+1 (555) 123-4567</p>
+                        <h4 className="font-light">Telefon</h4>
+                        <p className="text-gray-600 dark:text-gray-400 text-sm">+998 90 123 45 67</p>
                       </div>
                     </div>
                   </CardContent>
@@ -600,11 +599,11 @@ export default function AbixAgencyLanding() {
                         <MapPin className="w-4 h-4" />
                       </div>
                       <div>
-                        <h4 className="font-light">Address</h4>
+                        <h4 className="font-light">Manzil</h4>
                         <p className="text-gray-600 dark:text-gray-400 text-sm">
-                          123 Business Ave, Suite 100
+                          Toshkent shahar, Yunusobod tumani
                           <br />
-                          New York, NY 10001
+                          Amir Temur ko'chasi, 123-uy
                         </p>
                       </div>
                     </div>
@@ -623,31 +622,31 @@ export default function AbixAgencyLanding() {
             <div>
               <div className="flex items-center space-x-3 mb-6">
                 <div className="w-6 h-6 bg-black dark:bg-white rounded flex items-center justify-center">
-                  <span className="text-white dark:text-black font-bold text-xs">A</span>
+                  <span className="text-white dark:text-black font-bold text-xs">I</span>
                 </div>
-                <span className="font-light">Abix Agency</span>
+                <span className="font-light">Iqro Agency</span>
               </div>
               <p className="text-gray-600 dark:text-gray-400 font-light text-sm leading-relaxed">
-                Transforming businesses through innovative digital solutions.
+                IT loyihalar va ta'lim orqali bizneslarni innovatsion raqamli yechimlarga olib borish.
               </p>
             </div>
 
             <div>
-              <h4 className="font-light mb-6">Services</h4>
+              <h4 className="font-light mb-6">Xizmatlar</h4>
               <ul className="space-y-3 text-gray-600 dark:text-gray-400 text-sm">
                 <li>
                   <a href="#" className="hover:text-black dark:hover:text-white transition-colors font-light">
-                    Web Development
+                    Veb dasturlash
                   </a>
                 </li>
                 <li>
                   <a href="#" className="hover:text-black dark:hover:text-white transition-colors font-light">
-                    Mobile Apps
+                    Mobil ilovalar
                   </a>
                 </li>
                 <li>
                   <a href="#" className="hover:text-black dark:hover:text-white transition-colors font-light">
-                    UI/UX Design
+                    UI/UX dizayn
                   </a>
                 </li>
                 <li>
@@ -659,33 +658,33 @@ export default function AbixAgencyLanding() {
             </div>
 
             <div>
-              <h4 className="font-light mb-6">Company</h4>
+              <h4 className="font-light mb-6">Kompaniya</h4>
               <ul className="space-y-3 text-gray-600 dark:text-gray-400 text-sm">
                 <li>
                   <a href="#" className="hover:text-black dark:hover:text-white transition-colors font-light">
-                    About
+                    Biz haqimizda
                   </a>
                 </li>
                 <li>
                   <a href="#" className="hover:text-black dark:hover:text-white transition-colors font-light">
-                    Team
+                    Jamoa
                   </a>
                 </li>
                 <li>
                   <a href="#" className="hover:text-black dark:hover:text-white transition-colors font-light">
-                    Careers
+                    Karyera
                   </a>
                 </li>
                 <li>
                   <a href="#" className="hover:text-black dark:hover:text-white transition-colors font-light">
-                    Contact
+                    Bog'lanish
                   </a>
                 </li>
               </ul>
             </div>
 
             <div>
-              <h4 className="font-light mb-6">Resources</h4>
+              <h4 className="font-light mb-6">Resurslar</h4>
               <ul className="space-y-3 text-gray-600 dark:text-gray-400 text-sm">
                 <li>
                   <a href="#" className="hover:text-black dark:hover:text-white transition-colors font-light">
@@ -694,17 +693,17 @@ export default function AbixAgencyLanding() {
                 </li>
                 <li>
                   <a href="#" className="hover:text-black dark:hover:text-white transition-colors font-light">
-                    Case Studies
+                    Loyihalar
                   </a>
                 </li>
                 <li>
                   <a href="#" className="hover:text-black dark:hover:text-white transition-colors font-light">
-                    Privacy
+                    Maxfiylik
                   </a>
                 </li>
                 <li>
                   <a href="#" className="hover:text-black dark:hover:text-white transition-colors font-light">
-                    Terms
+                    Shartlar
                   </a>
                 </li>
               </ul>
@@ -713,7 +712,7 @@ export default function AbixAgencyLanding() {
 
           <div className="border-t border-gray-100 dark:border-gray-900 pt-8 text-center">
             <p className="text-gray-600 dark:text-gray-400 text-sm font-light">
-              &copy; 2024 Abix Agency. All rights reserved.
+              &copy; 2024 Iqro Agency. Barcha huquqlar himoyalangan.
             </p>
           </div>
         </div>
